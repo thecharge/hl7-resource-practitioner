@@ -1,6 +1,6 @@
 Package.describe({
   name: 'clinical:hl7-resource-practitioner',
-  version: '1.1.2',
+  version: '1.2.0',
   summary: 'HL7 FHIR Resource - Practitioner',
   git: 'https://github.com/clinical-meteor/hl7-resource-practitioner',
   documentation: 'README.md'
@@ -11,10 +11,12 @@ Package.onUse(function (api) {
 
   api.use('meteor-platform');
   api.use('mongo');
+
+  api.use('grove:less@0.1.1');
+
   api.use('aldeed:simple-schema@1.3.3');
   api.use('aldeed:collection2@2.3.3');
 
-  api.use('clinical:hl7-resource-datatypes@0.3.0');
   api.use('simple:json-routes@2.1.0');
   api.use('prime8consulting:meteor-oauth2-server@0.0.2');
 
@@ -22,8 +24,9 @@ Package.onUse(function (api) {
   api.addFiles('server/rest.js', 'server');
   api.addFiles('server/initialize.js', 'server');
 
-    api.use('clinical:base-model@1.3.1');
     api.use('clinical:router@2.0.17');
+    api.use('clinical:base-model@1.3.5');
+    api.use('clinical:hl7-resource-datatypes@0.4.0');
 
     api.addFiles('client/components/practitionerUpsertPage/practitionerUpsertPage.html', ['client']);
     api.addFiles('client/components/practitionerUpsertPage/practitionerUpsertPage.js', ['client']);
@@ -43,9 +46,5 @@ Package.onUse(function (api) {
     api.addFiles('client/components/practitionersListPage/practitionersListPage.less', ['client']);
 
   api.export('Practitioners');
+  api.export('PractitionerSchema');
 });
-
-// Package.onTest(function (api) {
-//   api.use('tinytest');
-//   api.use('clinical:hl7-resource-practitioner');
-// });
