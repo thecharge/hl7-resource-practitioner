@@ -1,6 +1,6 @@
 Package.describe({
   name: 'clinical:hl7-resource-practitioner',
-  version: '1.2.0',
+  version: '1.3.0',
   summary: 'HL7 FHIR Resource - Practitioner',
   git: 'https://github.com/clinical-meteor/hl7-resource-practitioner',
   documentation: 'README.md'
@@ -24,26 +24,25 @@ Package.onUse(function (api) {
   api.addFiles('server/rest.js', 'server');
   api.addFiles('server/initialize.js', 'server');
 
-    api.use('clinical:router@2.0.17');
-    api.use('clinical:base-model@1.3.5');
-    api.use('clinical:hl7-resource-datatypes@0.4.0');
+  api.use('clinical:base-model@1.3.5');
+  api.use('clinical:hl7-resource-datatypes@0.4.2');
 
-    api.addFiles('client/components/practitionerUpsertPage/practitionerUpsertPage.html', ['client']);
-    api.addFiles('client/components/practitionerUpsertPage/practitionerUpsertPage.js', ['client']);
-    api.addFiles('client/components/practitionerUpsertPage/practitionerUpsertPage.less', ['client']);
-
-    api.addFiles('client/components/practitionersTablePage/practitionersTablePage.html', ['client']);
-    api.addFiles('client/components/practitionersTablePage/practitionersTablePage.js', ['client']);
-    api.addFiles('client/components/practitionersTablePage/practitionersTablePage.less', ['client']);
-    api.addFiles('client/components/practitionersTablePage/jquery.tablesorter.js', ['client']);
-
-    api.addFiles('client/components/practitionerPreviewPage/practitionerPreviewPage.html', ['client']);
-    api.addFiles('client/components/practitionerPreviewPage/practitionerPreviewPage.js', ['client']);
-    api.addFiles('client/components/practitionerPreviewPage/practitionerPreviewPage.less', ['client']);
-
-    api.addFiles('client/components/practitionersListPage/practitionersListPage.html', ['client']);
-    api.addFiles('client/components/practitionersListPage/practitionersListPage.js', ['client']);
-    api.addFiles('client/components/practitionersListPage/practitionersListPage.less', ['client']);
+    // api.addFiles('client/components/practitionerUpsertPage/practitionerUpsertPage.html', ['client']);
+    // api.addFiles('client/components/practitionerUpsertPage/practitionerUpsertPage.js', ['client']);
+    // api.addFiles('client/components/practitionerUpsertPage/practitionerUpsertPage.less', ['client']);
+    //
+    // api.addFiles('client/components/practitionersTablePage/practitionersTablePage.html', ['client']);
+    // api.addFiles('client/components/practitionersTablePage/practitionersTablePage.js', ['client']);
+    // api.addFiles('client/components/practitionersTablePage/practitionersTablePage.less', ['client']);
+    // api.addFiles('client/components/practitionersTablePage/jquery.tablesorter.js', ['client']);
+    //
+    // api.addFiles('client/components/practitionerPreviewPage/practitionerPreviewPage.html', ['client']);
+    // api.addFiles('client/components/practitionerPreviewPage/practitionerPreviewPage.js', ['client']);
+    // api.addFiles('client/components/practitionerPreviewPage/practitionerPreviewPage.less', ['client']);
+    //
+    // api.addFiles('client/components/practitionersListPage/practitionersListPage.html', ['client']);
+    // api.addFiles('client/components/practitionersListPage/practitionersListPage.js', ['client']);
+    // api.addFiles('client/components/practitionersListPage/practitionersListPage.less', ['client']);
 
   api.export('Practitioners');
   api.export('PractitionerSchema');
