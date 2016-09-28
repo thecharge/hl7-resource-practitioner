@@ -1,6 +1,6 @@
 Package.describe({
   name: 'clinical:hl7-resource-practitioner',
-  version: '1.4.0',
+  version: '1.4.1',
   summary: 'HL7 FHIR Resource - Practitioner',
   git: 'https://github.com/clinical-meteor/hl7-resource-practitioner',
   documentation: 'README.md'
@@ -25,7 +25,7 @@ Package.onUse(function (api) {
   api.addFiles('server/initialize.js', 'server');
 
   api.use('clinical:base-model@1.3.5');
-  api.use('clinical:hl7-resource-datatypes@0.4.2');
+  api.use('clinical:hl7-resource-datatypes@0.4.7');
 
     // api.addFiles('client/components/practitionerUpsertPage/practitionerUpsertPage.html', ['client']);
     // api.addFiles('client/components/practitionerUpsertPage/practitionerUpsertPage.js', ['client']);
