@@ -27,25 +27,8 @@ Package.onUse(function (api) {
 
   api.imply('clinical:user-model');
 
-    // api.addFiles('client/components/practitionerUpsertPage/practitionerUpsertPage.html', ['client']);
-    // api.addFiles('client/components/practitionerUpsertPage/practitionerUpsertPage.js', ['client']);
-    // api.addFiles('client/components/practitionerUpsertPage/practitionerUpsertPage.less', ['client']);
-    //
-    // api.addFiles('client/components/practitionersTablePage/practitionersTablePage.html', ['client']);
-    // api.addFiles('client/components/practitionersTablePage/practitionersTablePage.js', ['client']);
-    // api.addFiles('client/components/practitionersTablePage/practitionersTablePage.less', ['client']);
-    // api.addFiles('client/components/practitionersTablePage/jquery.tablesorter.js', ['client']);
-    //
-    // api.addFiles('client/components/practitionerPreviewPage/practitionerPreviewPage.html', ['client']);
-    // api.addFiles('client/components/practitionerPreviewPage/practitionerPreviewPage.js', ['client']);
-    // api.addFiles('client/components/practitionerPreviewPage/practitionerPreviewPage.less', ['client']);
-    //
-    // api.addFiles('client/components/practitionersListPage/practitionersListPage.html', ['client']);
-    // api.addFiles('client/components/practitionersListPage/practitionersListPage.js', ['client']);
-    // api.addFiles('client/components/practitionersListPage/practitionersListPage.less', ['client']);
-
-    api.addFiles('lib/hl7-resource-practitioner.js', ['client', 'server']);
-    api.addFiles('server/rest.js', 'server');
+  api.addFiles('lib/hl7-resource-practitioner.js', ['client', 'server']);
+  api.addFiles('server/rest.js', 'server');
 
   api.export('Practitioners');
   api.export('PractitionerSchema');
